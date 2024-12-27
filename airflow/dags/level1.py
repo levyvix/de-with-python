@@ -1,12 +1,9 @@
 import datetime as dt
 
-from airflow.decorators import dag, task
+from airflow.decorators import dag
 from airflow.providers.google.cloud.operators.bigquery import BigQueryInsertJobOperator
 from airflow.providers.google.cloud.operators.cloud_sql import (
     CloudSQLExportInstanceOperator,
-)
-from airflow.providers.google.cloud.transfers.bigquery_to_bigquery import (
-    BigQueryToBigQueryOperator,
 )
 from airflow.providers.google.cloud.transfers.gcs_to_bigquery import (
     GCSToBigQueryOperator,

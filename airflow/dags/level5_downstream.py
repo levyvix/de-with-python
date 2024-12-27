@@ -1,4 +1,3 @@
-import os
 from datetime import datetime
 
 from airflow import DAG
@@ -6,7 +5,6 @@ from airflow.contrib.operators.bigquery_operator import BigQueryOperator
 from airflow.contrib.operators.gcs_to_gcs import (
     GoogleCloudStorageToGoogleCloudStorageOperator,
 )
-from airflow.contrib.sensors.gcs_sensor import GoogleCloudStorageObjectSensor
 from airflow.models import Variable
 from airflow.providers.google.cloud.sensors.gcs import GCSObjectExistenceSensor
 
