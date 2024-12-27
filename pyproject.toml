@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "de-with-python"
+version = "0.1.0"
+description = ""
+authors = ["Levy Nunes"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+apache-airflow = "^2.10.4"
+faker = "^33.1.0"
+pandas = ">=2.1.2,<2.2"
+elasticsearch = "^8.17.0"
+pyarrow = "^18.1.0"
+apache-airflow-providers-elasticsearch = "^5.5.3"
+apache-airflow-providers-google = "^11.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

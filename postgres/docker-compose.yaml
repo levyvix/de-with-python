@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_cdc
+    environment:
+      POSTGRES_DB: home
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: l123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    command: >
+      postgres -c wal_level=logical
+              -c max_replication_slots=5
+              -c max_wal_senders=5
+
+volumes:
+  postgres_data:
